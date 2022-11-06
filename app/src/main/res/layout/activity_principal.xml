@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10sp"
+    android:orientation="vertical"
+    tools:context=".Principal">
+
+    <TableRow
+        android:id="@+id/tblIngresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgIngresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="10sp"
+            app:srcCompat="@drawable/ic_add" />
+
+        <TextView
+            android:id="@+id/lblIngresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="20sp"
+            android:textSize="18dp"
+            android:text="@string/ingresar"
+            android:textColor="#000000" />
+
+        <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:layout_marginLeft="35sp"
+            android:backgroundTint="#2196F3"
+            android:elevation="12sp"
+            android:src="@drawable/ic_add"
+            app:borderWidth="0dp"
+            app:fabSize="normal" />-->
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tblListar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="10sp"
+            app:srcCompat="@drawable/ic_list" />
+
+        <TextView
+            android:id="@+id/lblList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="20sp"
+            android:textSize="18dp"
+            android:text="@string/listar"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tblModificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgModificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="10sp"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <TextView
+            android:id="@+id/lblModificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="20sp"
+            android:textSize="18dp"
+            android:text="@string/modificar"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <!--<TableRow
+        android:id="@+id/tblUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        &lt;!&ndash;<ImageView
+            android:id="@+id/imgUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="10sp"
+            app:srcCompat="@mipmap/ic_user" />&ndash;&gt;
+
+        <TextView
+            android:id="@+id/lblUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="20sp"
+            android:text="@string/perfil"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tblAyuda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        &lt;!&ndash;<ImageView
+            android:id="@+id/imgHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="10sp"
+            app:srcCompat="@mipmap/ic_help" />&ndash;&gt;
+
+        <TextView
+            android:id="@+id/lblHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="20sp"
+            android:text="@string/ayuda"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tblInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        &lt;!&ndash;<ImageView
+            android:id="@+id/imgInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="10sp"
+            app:srcCompat="@mipmap/ic_info" />&ndash;&gt;
+
+        <TextView
+            android:id="@+id/lblInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="20sp"
+            android:text="@string/info"
+            android:textColor="#000000" />
+    </TableRow>
+
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lblSalir"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="75sp"
+            android:clickable="true"
+            android:gravity="right"
+            android:text="@string/salir"
+            android:textColor="@color/design_default_color_on_secondary" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="5sp">
+
+            &lt;!&ndash;<ImageView
+                android:id="@+id/imgSalir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:srcCompat="@mipmap/ic_salir" />&ndash;&gt;
+        </RelativeLayout>
+    </TableRow>
+-->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding="10sp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            app:srcCompat="@drawable/vientologo" />
+
+        <!--<TextView
+            android:id="@+id/txtContacto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center|center_vertical"
+            android:padding="20sp"
+            android:text="@string/contacto"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />-->
+    </TableRow>
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">FIDES-RCA</string>
+    <string name="nombreEquipo">FIDES</string>
+    <string name="tituloInicio">Bienvenido a\n Registro de la Calidad del Aire</string>
+    <string name="user">Nombre de usuario:</string>
+    <string name="password">Contraseña:</string>
+    <string name="btnIngresar">Ingresar</string>
+    <string name="btnAceptar">Aceptar</string>
+    <string name="btnCancelar">Cancelar</string>
+    <string name="btnConfirmar">Confirmar</string>
+    <string name="btnEditar">Editar</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="olvido">Olvidó la contraseña?</string>
+    <string name="cuenta">No tiene una cuenta?</string>
+    <string name="info">Información</string>
+    <string name="contacto">contacto.fides@gmail.com</string>
+    <string name="modificar">Modificar Registros</string>
+    <string name="listar">Listar Registros</string>
+    <string name="perfil">Usuario</string>
+    <string name="tituloObs">Ingreso de Nueva Observación:</string>
+    <string name="formulario">Formulario:</string>
+    <string name="casillas">Casillas:</string>
+    <string name="parametro">Parámetro:</string>
+    <string name="unidadMedida">Unidad de medida:</string>
+    <string name="localidad">Localidad:</string>
+    <string name="depto">Departamento:</string>
+    <string name="valor">Valor:</string>
+    <string name="criticidad">Nivel de Criticidad:</string>
+    <string name="salir">Salir</string>
+    <string name="id">Id:</string>
+    <string name="fecha">Fecha:</string>
+    <string name="selecFecha">Seleccione Fecha</string>
+    <string name="fenomeno">Fenómeno:</string>
+    <string name="nombreUser">Nombre de Usuario:</string>
+    <string name="nombre">Nombre:</string>
+    <string name="apellido">Apellido:</string>
+    <string name="tipoUser">Tipo de Usuario:</string>
+    <string name="estado">Estado:</string>
+    <string name="tipoDoc">Tipo Documento:</string>
+    <string name="numDoc">Nro. de Documento:</string>
+    <string name="direccion">Direccion:</string>
+    <string name="correo">Correo:</string>
+    <string name="inicio">Inicio</string>
+    <string name="ingresar">Ingresar un Registro</string>
+    <string name="tituloInfo">Información de la Aplicación:</string>
+    <string name="tituloSearch">Buscar Observación:</string>
+    <string name="tituloHelp">Ayuda de la Aplicación:</string>
+    <string name="tituloUser">Datos de Usuario:</string>
+    <string name="tituloDatos">Datos de Observación ingresada:</string>
+    <string name="exito">Observacion ingresada con exito!</string>
+    <string name="tituloVer">Lista de Observaciones:</string>
+    <string name="latitud">Latitud:</string>
+    <string name="longitud">Longitud:</string>
+    <string name="altitud">Altitud:</string>
+
+    <string name="baseURL">http://192.168.1.11:8080/RESTPF/</string>
+
+    <string name="contactenos">Si olvidó la contraseña, no está registrado o necesita ayuda, contáctenos:</string>
+
+    <string name="textoInfo">Desarrollada por: FIDES\nPara: Android 10.0 API 29\nVersión: 1.0\nFecha: Octubre 2022\n
+    Equipo de Desarrollo:\n Felipe Martínez\n Ivan Padula\n José Alvez\n Carla Pérez\n
+    Contacto:\ncontacto.fides@gmail.com</string>
+
+
+    <string name="textoHelp">1. Ingrese Nombre de Usuario y Contraseña que le fueron asignados cuando se registro.\n
+    2. Si no cuenta con Usuario y Contraseña, puede solicitarlos a la direccion de correo contacto.fides@gmail.com.\n
+    3. Luego de ingresar a la Aplicacion, puede realizar un Registro presionando en "Ingresar un Registro" en la pantalla principal.\n
+    4. Para listar los Registros, puede presionar en "Listar Registros".\n
+    5. Para modificar un Registro, puede presionar en "Modificar Registro".\n
+    6. Para ver la informacion de la Aplicacion, puede presionar en "Informacion" que aparece al desplegar el menú lateral.\n
+    7. Para ver su informacion del Usuario, puede presionar en "Usuario" del menú lateral.\n
+    8. Para salir de la Aplicacion, puede presionar en "Salir" en el menú lateral.
+    </string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_user_id">Número de identificación</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Iniciar sesión</string>
+    <string name="action_sign_in_short">Iniciar sesión</string>
+    <string name="error_invalid_user_id">Nombre de identificación inválido</string>
+    <string name="error_incorrect_password">La contraseña es incorrecta</string>
+    <string name="error_field_required">Este campo es requerido</string>
+    <string name="error_server">Error en el servidor</string>
+    <string name="error_incorrect_user_id">Nombre de identificación no registrado</string>
+    <string name="error_network">Conexión de red no disponible</string>
+    <string name="error_invalid_password">Contraseña inválida</string>
+
+
+</resources>
