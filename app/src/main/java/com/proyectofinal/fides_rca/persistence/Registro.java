@@ -13,9 +13,6 @@ public class Registro {
     @ColumnInfo(name="id")
     private int id;
 
-    @ColumnInfo(name="fecha")
-    private String fecha;
-
     @NonNull
     @ColumnInfo(name="formulario")
     private String formulario;
@@ -25,30 +22,14 @@ public class Registro {
     private String casillas;
 
     @NonNull
-    @ColumnInfo(name="localidad")
-    private String localidad;
-
-    @NonNull
     @ColumnInfo(name="parametro")
     private String parametro;
 
-    @NonNull
-    @ColumnInfo(name="unidad_medida")
-    private String unidad_medida;
-
-    @NonNull
-    @ColumnInfo(name="valor")
-    private double valor;
-
-    public Registro(int id, String fecha, @NonNull String formulario, @NonNull String casillas, @NonNull String localidad, @NonNull String parametro, @NonNull String unidad_medida, double valor) {
+    public Registro(int id, String fecha, @NonNull String formulario, @NonNull String casillas, @NonNull String parametro) {
         this.id = id;
-        this.fecha = fecha;
         this.formulario = formulario;
         this.casillas = casillas;
-        this.localidad = localidad;
         this.parametro = parametro;
-        this.unidad_medida = unidad_medida;
-        this.valor = valor;
     }
 
     public Registro() {
@@ -58,13 +39,9 @@ public class Registro {
     public String toString() {
         return "Registro{" +
                 "id=" + id +
-                ", fecha='" + fecha + '\'' +
                 ", formulario='" + formulario + '\'' +
                 ", casillas='" + casillas + '\'' +
-                ", localidad='" + localidad + '\'' +
                 ", parametro='" + parametro + '\'' +
-                ", unidad_medida='" + unidad_medida + '\'' +
-                ", valor=" + valor +
                 '}';
     }
 
@@ -74,14 +51,6 @@ public class Registro {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
     }
 
     @NonNull
@@ -103,15 +72,6 @@ public class Registro {
     }
 
     @NonNull
-    public String getLocalidad() {
-        return localidad;
-    }
-
-    public void setLocalidad(@NonNull String localidad) {
-        this.localidad = localidad;
-    }
-
-    @NonNull
     public String getParametro() {
         return parametro;
     }
@@ -120,20 +80,4 @@ public class Registro {
         this.parametro = parametro;
     }
 
-    @NonNull
-    public String getUnidad_medida() {
-        return unidad_medida;
-    }
-
-    public void setUnidad_medida(@NonNull String unidad_medida) {
-        this.unidad_medida = unidad_medida;
-    }
-
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
 }

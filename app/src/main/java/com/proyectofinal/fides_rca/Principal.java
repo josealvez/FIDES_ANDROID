@@ -102,7 +102,7 @@ public class Principal extends AppCompatActivity {
         //recibimos intent con nombre de usuario logueado
         Bundle bundle = this .getIntent().getExtras();
         Intent intent = getIntent();
-        nombreUsuario = bundle.getString("UserName");
+        nombreUsuario = bundle.getString("Nombre");
 
         ////////////////////////////////////////////////////////////////////////////////////
         //Declaramos acciones

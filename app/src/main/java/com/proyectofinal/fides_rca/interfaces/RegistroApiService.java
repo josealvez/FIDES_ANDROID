@@ -5,6 +5,7 @@ import com.proyectofinal.fides_rca.persistence.ObservacionesDTO;
 import com.proyectofinal.fides_rca.persistence.Registro;
 import com.proyectofinal.fides_rca.persistence.RegistrosDTO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -24,8 +25,8 @@ public interface RegistroApiService {
     @GET("todos")
     Call<RegistroR> getRegistros();
 
-    @GET("rest/registros/todos")
-    Call<List<RegistrosDTO>> getDatosRegistros();
+    @GET("api/v1/registros/obtenerregistros")
+    Call<ArrayList<RegistrosDTO>> getDatosRegistros();
 
     @POST("rest/registros/agregar")
     Call<RegistrosDTO> postRegistro(@Body RegistrosDTO registrosDTO);

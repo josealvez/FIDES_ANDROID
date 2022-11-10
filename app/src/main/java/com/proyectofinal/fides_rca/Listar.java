@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ import com.proyectofinal.fides_rca.interfaces.RegistroApiService;
 import com.proyectofinal.fides_rca.persistence.ObservacionesDTO;
 import com.proyectofinal.fides_rca.persistence.RegistrosDTO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -79,6 +81,7 @@ public class Listar extends AppCompatActivity {
     ////////////////////////////////////////////////////////////////////////////////
     ListView lstReg;
     TextView txtDatos;
+    List<String> datos = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +91,11 @@ public class Listar extends AppCompatActivity {
 
         lstReg = (ListView) findViewById(R.id.lstReg);
         txtDatos = (TextView) findViewById(R.id.txtDatos);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1,
+                datos );
+        lstReg.setAdapter(arrayAdapter);
 
         getRegistros();
 
@@ -99,12 +107,12 @@ public class Listar extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         RegistroApiService registroApiService = retrofit.create(RegistroApiService.class);
-        Call<List<RegistrosDTO>> call = registroApiService.getDatosRegistros();
+        Call<ArrayList<RegistrosDTO>> call = registroApiService.getDatosRegistros();
 
 
-        call.enqueue(new Callback<List<RegistrosDTO>>() {
+        call.enqueue(new Callback<ArrayList<RegistrosDTO>>() {
             @Override
-            public void onResponse(Call<List<RegistrosDTO>> call, Response<List<RegistrosDTO>> response) {
+            public void onResponse(Call<ArrayList<RegistrosDTO>> call, Response<ArrayList<RegistrosDTO>> response) {
                 if(!response.isSuccessful()){
                     Toast.makeText(Listar.this, "Error de conexion", Toast.LENGTH_LONG).show();
                     return;
@@ -112,23 +120,30 @@ public class Listar extends AppCompatActivity {
                 List<RegistrosDTO> registroList = response.body();
                 for(RegistrosDTO registro: registroList){
                     String content = "";
-                    content += "Id:"+ registro.getIdRegistro()+"\n";
+                    /*content += "Id:"+ registro.getIdRegistro()+"\n";
                     content += "Parametro: "+ registro.getParametro()+"\n";
                     content += "Casillas: "+ registro.getIdCasillaNombre()+"\n";
                     content += "Formulario: "+ registro.getIdFormularioNombre()+"\n";
                     content += "Unidad: "+ registro.getUnidad_medida()+"\n";
                     content += "Valor: "+ registro.getValor()+"\n";
                     content += "Localidad: "+ registro.getIdLocalidadNombre()+"\n";
-                    content += "Fecha: "+ registro.getFechaHoraString()+"\n";
+                    content += "Fecha: "+ registro.getFechaHoraString()+"\n";*/
+                    content += "Nombre: "+ registro.getNombre()+"\n";
+                    content += "Descripcion: "+ registro.getDescripcion()+"\n";
+                    content += "Datos: "+"\n";
+                    for(String i : registro.getCasillas().keySet()) {
+                        content += "- "+ i +": "+ registro.getCasillas().get(i)+"\n";
+                    }
                     content += "----------------------------------------\n";
 
+                    datos.add(content);
                     txtDatos.append(content);
 
                 }
             }
 
             @Override
-            public void onFailure(Call<List<RegistrosDTO>> call, Throwable t) {
+            public void onFailure(Call<ArrayList<RegistrosDTO>> call, Throwable t) {
                 Toast.makeText(Listar.this, t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
